@@ -8,7 +8,7 @@
 
     <EditText
         android:layout_margin="16dp"
-        android:id="@+id/etEnterCity"
+        android:id="@+id/etEnterCityName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_textbox"
