@@ -13,7 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TheWeatherIsWhat"
         tools:targetApi="31">
-        <activity
+              <activity
+            android:name=".CitiesWeatherActivity"
+                  android:label="Cities Weather"
+            android:exported="false" />
+                <activity
             android:name=".CreateAccount"
             android:exported="false"
             android:label="@string/title_activity_create_account"
@@ -28,12 +32,12 @@
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.TheWeatherIsWhat.NoActionBar">
-                        <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
-//code
+
 </manifest>

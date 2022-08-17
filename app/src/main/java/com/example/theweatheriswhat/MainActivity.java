@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnLogin.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, ListViewActivity.class);
+            Intent intent = new Intent(MainActivity.this, CitiesWeatherActivity.class);
             startActivity(intent);
         });
 
