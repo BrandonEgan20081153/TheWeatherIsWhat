@@ -3,6 +3,7 @@ package com.example.theweatheriswhat;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +20,7 @@ import java.util.ArrayList;
 
 public class ListCitiesFragment extends Fragment {
 
-    EditText enterCityName;
+    EditText etCityName;
     ListView lvCities;
     ArrayList<String> citiesArrayList = new ArrayList<>();
     ArrayAdapter<String> arrayAdapter;
@@ -31,14 +32,11 @@ public class ListCitiesFragment extends Fragment {
         // Inflate the layout for this fragment
         View fragmentView = inflater.inflate(R.layout.activity_list_cities_fragment, container, false);
 
+
         lvCities = fragmentView.findViewById(R.id.lvCities);
-        enterCityName = fragmentView.findViewById(R.id.etEnterCityName);
         btnAdd = fragmentView.findViewById(R.id.btnAdd);
-//        citiesArrayList.add("City A");
-//        citiesArrayList.add("City B");
-//        citiesArrayList.add("City C");
-//        citiesArrayList.remove("City C");
-//        citiesArrayList.clear();
+        etCityName = fragmentView.findViewById(R.id.etCityName);
+
 
         arrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_dropdown_item_1line, citiesArrayList);
 
@@ -48,21 +46,20 @@ public class ListCitiesFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 TextView textView = (TextView) view;
-                Toast.makeText(getActivity(), textView.getText().toString(), Toast.LENGTH_LONG).show();
+//                Toast.makeText(getActivity(), textView.getText().toString(), Toast.LENGTH_LONG).show();
+                Context context = getActivity();
+                ((CitiesWeatherActivity) context).getClickedCityName(textView.getText().toString());
             }
         });
+
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                AddCity(view);
+            public void onClick(View v) {
+                citiesArrayList.add(etCityName.getText().toString());
+                arrayAdapter.notifyDataSetChanged();
             }
         });
         return fragmentView;
-    }
-    public void AddCity(View view) {
-        String CityNameStr = enterCityName.getText().toString();
-        citiesArrayList.add(CityNameStr);
-        arrayAdapter.notifyDataSetChanged();
     }
 }
 

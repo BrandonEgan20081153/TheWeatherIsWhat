@@ -16,6 +16,8 @@ public class CitiesWeatherActivity extends AppCompatActivity {
 
     TabLayout tlWeather;
     ViewPager2 vpWeather;
+    ListCitiesFragment listCitiesFragment;
+    WeatherDetailsFragment weatherDetailsFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +27,12 @@ public class CitiesWeatherActivity extends AppCompatActivity {
         tlWeather = findViewById(R.id.tlWeather);
         vpWeather = findViewById(R.id.vpWeather);
 
+        listCitiesFragment = new ListCitiesFragment();
+        weatherDetailsFragment = new WeatherDetailsFragment();
+
         WeatherFragmentAdapter myWeathersFragmentsAdapter = new WeatherFragmentAdapter(this);
         vpWeather.setAdapter(myWeathersFragmentsAdapter);
+        vpWeather.setOffscreenPageLimit(1);
 
         new TabLayoutMediator(tlWeather, vpWeather, new TabLayoutMediator.TabConfigurationStrategy() {
             @Override
@@ -41,6 +47,11 @@ public class CitiesWeatherActivity extends AppCompatActivity {
 
     }
 
+    public void getClickedCityName(String cityName) {
+        vpWeather.setCurrentItem(1);
+        weatherDetailsFragment.getCityNameFromActivityAndRefreshWeatherDetails(cityName);
+    }
+
     public class WeatherFragmentAdapter extends FragmentStateAdapter {
 
         public WeatherFragmentAdapter(@NonNull FragmentActivity fragmentActivity) {
@@ -51,9 +62,9 @@ public class CitiesWeatherActivity extends AppCompatActivity {
         @Override
         public Fragment createFragment(int position) {
             if (position == 0) {
-                return new ListCitiesFragment();
+                return listCitiesFragment;
             } else if (position == 1) {
-                return new WeatherDetailsFragment();
+                return weatherDetailsFragment;
             }
             return null;
         }
