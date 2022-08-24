@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1093771466861",
+    "project_id": "whatstheweather-75a25",
+    "storage_bucket": "whatstheweather-75a25.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1093771466861:android:1ad2fb3ecfc0fa86750764",
+        "android_client_info": {
+          "package_name": "com.example.theweatheriswhat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1093771466861-npljumj4fsa2fsaqcjs20a4o83rqmb42.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtWX1fYA3g_Jf-_zU7EYj1tu-ApMJmQG8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1093771466861-npljumj4fsa2fsaqcjs20a4o83rqmb42.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

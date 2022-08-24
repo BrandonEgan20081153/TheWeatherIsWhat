@@ -7,11 +7,13 @@
         <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/drawable/bg_textbox.xml" value="0.139" />
         <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1585" />
         <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/layout/activity_cities_weather.xml" value="0.17350557244174267" />
-        <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/layout/activity_create_account.xml" value="0.2" />
+        <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/layout/activity_create_account.xml" value="0.1" />
         <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/layout/activity_list_cities_fragment.xml" value="0.18034447821681865" />
         <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/layout/activity_list_view.xml" value="0.22" />
+        <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/layout/activity_login.xml" value="0.12537993920972645" />
         <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/layout/activity_weather_details_fragment.xml" value="0.17350557244174267" />
+        <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/layout/activity_sign_up.xml" value="0.12537993920972645" />
+        <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/layout/activity_weather_details_fragment.xml" value="0.1" />
         <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/layout/content_create_account.xml" value="0.1" />
         <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/layout/content_main.xml" value="0.1" />
         <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/layout/fragment_first.xml" value="0.1" />
