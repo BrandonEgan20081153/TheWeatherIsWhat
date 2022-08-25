@@ -6,8 +6,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
+    android:background="@color/light_blue"
     tools:context=".MainActivity">
 
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent=".7"
+        android:src="@drawable/logo"
+        app:layout_constraintDimensionRatio="4167:2405"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/etEnterEmail"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
 
     <Button
         android:id="@+id/btnGoToCreateAccount"
@@ -15,6 +31,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bg_button"
         android:padding="20dp"
+        android:textColor="@color/light_blue"
         android:text="Create Account"
         android:textSize="20dp"
         app:backgroundTint="@null"
@@ -24,6 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnLogin"
         app:layout_constraintVertical_bias="0.202"
         tools:ignore="MissingConstraints"
+        android:textStyle="bold"
         tools:layout_conversion_absoluteHeight="58dp"
         tools:layout_conversion_absoluteWidth="371dp" />
 
@@ -34,6 +52,7 @@
         android:layout_marginTop="28dp"
         android:padding="20dp"
         android:text="Login"
+        android:textColor="@color/light_blue"
         android:background="@drawable/bg_button"
         app:backgroundTint="@null"
         android:textSize="20dp"
@@ -41,6 +60,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etEnterPassword"
         tools:ignore="MissingConstraints"
+        android:textStyle="bold"
         tools:layout_conversion_absoluteHeight="58dp"
         tools:layout_conversion_absoluteWidth="371dp" />
 

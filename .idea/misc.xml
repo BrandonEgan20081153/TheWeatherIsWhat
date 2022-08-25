@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1865" />
         <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/drawable/bg_button.xml" value="0.1585" />
+        <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/drawable/bg_button2.xml" value="0.1865" />
         <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/drawable/bg_textbox.xml" value="0.139" />
+        <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/drawable/bg_textbox2.xml" value="0.1865" />
         <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1585" />
         <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/layout/activity_cities_weather.xml" value="0.17350557244174267" />
         <entry key="..\:/Users/bcega/AndroidStudioProjects/TheWeatherIsWhat/app/src/main/res/layout/activity_create_account.xml" value="0.1" />

@@ -23,7 +23,7 @@ import cz.msebera.android.httpclient.Header;
 
 public class WeatherDetailsFragment extends Fragment {
 
-    TextView tvCityName, tvTemp, tvTime;
+    TextView tvCityName, tvStatus, tvHumidity, tvSun, tvTemp, tvTime;
     ImageView ivWeather;
     AsyncHttpClient client;
 
@@ -37,6 +37,9 @@ public class WeatherDetailsFragment extends Fragment {
         tvTemp = returnView.findViewById(R.id.tvTemp);
         tvTime = returnView.findViewById(R.id.tvTime);
         ivWeather = returnView.findViewById(R.id.ivWeather);
+        tvSun = returnView.findViewById(R.id.tvSun);
+        tvHumidity = returnView.findViewById(R.id.tvHumidity);
+        tvStatus = returnView.findViewById(R.id.tvStatus);
 
         ivWeather.setImageResource(R.mipmap.ic_launcher);
         client = new AsyncHttpClient();
@@ -57,22 +60,32 @@ public class WeatherDetailsFragment extends Fragment {
 
                     String humidity = mainJO.getString("humidity");
 
-                    tvTemp.setText(String.valueOf(tempString) + " , " + humidity);
+                    tvTemp.setText(tempString + " C");
+                    tvHumidity.setText("Humidity: " + humidity + "%");
 
                     JSONArray weatherJA = response.getJSONArray("weather");
                     JSONObject iconJO = weatherJA.getJSONObject(0);
 
                     String weatherIconCode = iconJO.getString("icon");
+                    String weatherDescription = iconJO.getString("description");
+                    tvStatus.setText(weatherDescription);
 
                     long timeMilliseconds = response.getLong("dt") * 1000;
 
                     SimpleDateFormat sdf = new SimpleDateFormat("hh:mm");
-                    Date date = new Date(timeMilliseconds);
-                    String formattedTime = sdf.format(date);
+                    String formattedTime = sdf.format(new Date(timeMilliseconds));
 
-                    tvTime.setText(formattedTime);
+                    tvTime.setText("Last Update: " + formattedTime);
 
                     Glide.with(getActivity()).load("http://openweathermap.org/img/wn/" + weatherIconCode + "@2x.png").into(ivWeather);
+
+                    JSONObject sysJO = response.optJSONObject("sys");
+                    long sunsetLong = sysJO.getLong("sunset") * 1000;
+                    long sunriseLong = sysJO.getLong("sunrise") * 1000;
+                    String formattedSunRise = sdf.format(new Date(sunsetLong));
+                    String formattedSunSet = sdf.format(new Date(sunriseLong));
+
+                    tvSun.setText(formattedSunRise + " / " + formattedSunSet);
 
                 } catch (Exception e) {
                     e.printStackTrace();
