@@ -26,6 +26,7 @@ public class ListCitiesFragment extends Fragment {
     ArrayAdapter<String> arrayAdapter;
     Button btnAdd;
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
