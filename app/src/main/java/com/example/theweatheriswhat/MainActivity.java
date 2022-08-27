@@ -38,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
 
         btnGoToCreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CreateAccount.class);
                 startActivity(intent);
             }
-            });
+        });
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,15 +58,15 @@ public class MainActivity extends AppCompatActivity {
                                     // Sign in success, update UI with the signed-in user's information
                                     Toast.makeText(MainActivity.this, "Login successful.",
                                             Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(MainActivity.this, CitiesWeatherActivity.class);
-            startActivity(intent);
-        } else {
-            Toast.makeText(MainActivity.this, "Login failed.",
-                    Toast.LENGTH_SHORT).show();
-        }
-    }
-});
-        }
+                                    Intent intent = new Intent(MainActivity.this, CitiesWeatherActivity.class);
+                                    startActivity(intent);
+                                } else {
+                                    Toast.makeText(MainActivity.this, "Login failed.",
+                                            Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+            }
         });
-        }
-        }
+    }
+}
